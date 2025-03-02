@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 250px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.menu-item {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #ffffff;
+}
+
+.player-name-section {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.cs-dialog {
+    font-size: 20px;
+
+    .heading {
+        .text {
+            font-size: 20px !important;
+        }
+    }
+
+    .cs-tabs {
+        .label {
+            font-size: 20px;
+        }
+
+        .cs-input {
+            font-size: 20px;
+        }
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.spraypaint-preview {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.spraypaint-preview-image {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.spraypaint-selectors {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.spraypaint-selector-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spraypaint-selector-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Filters */
+
+.filter-orange {
+    filter: sepia(0.5) hue-rotate(20deg) saturate(1.7) brightness(1.1);
+}
+
+.filter-ltblue {
+    filter: hue-rotate(180deg) saturate(1.5);
+}
+
+.filter-sepia {
+    filter: sepia(0.8);
+}
+
+.filter-grayscale {
+    filter: grayscale(1);
+}

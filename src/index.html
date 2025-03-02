@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home | roman mendaliev</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <a href="#" class="menu-item" data-section="new-game">New game</a>
+            <a href="#" class="menu-item" data-section="find-servers">Find servers</a>
+            <a href="#" class="menu-item" data-section="options">Options</a>
+            <a href="#" class="menu-item" data-section="quit">Quit</a>
+        </div>
+    </div>
+
+    <dialog class="cs-dialog" id="options-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Options</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content options">
+                <div class="cs-tabs">
+                    <input
+                        class="radiotab"
+                        name="tabs"
+                        tabindex="1"
+                        type="radio"
+                        id="tabone"
+                        checked
+                    />
+                    <label class="label" for="tabone">Multiplayer</label>
+                    <div class="panel" tabindex="1">
+                        <div class="sections">
+                            <div class="player-name-section">
+                                <label for="player-name">Player name</label>
+                                <input type="text" id="player-name" class="cs-input" readonly value="Roman Mendaliev">
+                            </div>
+                            <div>
+                                <label>Spraypaint image</label>
+                                <div class="spraypaint-preview">
+                                    <div class="spraypaint-preview-image" id="spraypaint-preview"></div>
+                                    <div class="spraypaint-selectors">
+                                        <div class="spraypaint-selector-row">
+                                            <select id="spraypaint-image" class="cs-select">
+                                                <option value="lambda" selected>lambda</option>
+                                                <option value="smiley">smiley</option>
+                                            </select>
+                                        </div>
+                                        <div class="spraypaint-selector-row">
+                                            <select id="spraypaint-filter" class="cs-select">
+                                                <option value="none" selected>None</option>
+                                                <option value="orange">Orange</option>
+                                                <option value="ltblue">Ltblue</option>
+                                                <option value="sepia">Sepia</option>
+                                                <option value="grayscale">Grayscale</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <menu class="footer-btns">
+                <button type="button" class="cs-btn" id="options-ok">OK</button>
+                <button type="button" class="cs-btn" id="options-cancel">Cancel</button>
+                <button type="button" class="cs-btn" id="options-apply">Apply</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <dialog class="cs-dialog" id="quit-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Confirm</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content">
+                Do you really want to quit?<br>
+                This will redirect you to my GitHub profile.
+            </div>
+            <menu class="footer-btns">
+                <button type="button" class="cs-btn" id="confirm-quit">Yes</button>
+                <button class="cs-btn" id="quit-cancel">No</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
