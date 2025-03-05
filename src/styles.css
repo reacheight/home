@@ -9,6 +9,7 @@ body {
     display: flex;
     color: white;
     overflow: hidden;
+    font-size: 115%;
 }
 
 .container {
@@ -18,20 +19,20 @@ body {
 }
 
 .menu {
-    width: 250px;
-    margin-left: 200px;
-    margin-bottom: 100px;
+    width: 287px;
+    margin-left: 10%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
 
 .menu-item {
-    margin: 10px 0;
+    margin: 11px 0;
     cursor: pointer;
     color: #cccccc;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 34px;
     transition: color 0.3s;
 }
 
@@ -42,44 +43,98 @@ body {
 .player-name-section {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 230px;
+}
+
+.age-section {
+    display: flex;
+    gap: 23px;
+}
+
+.age-section {
+    margin-top: 11px;
+}
+
+.age-input-row {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: 22px;
+}
+
+.age-input {
+    width: 57px;
+}
+
+.city-section {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+}
+
+.age-and-city-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.spraypaint-section {
+    display: flex;
+    flex-direction: column;
+    width: 287px;
+}
+
+.cs-slider .ruler {
+    z-index: 0;
+    margin-left: 2px;
+}
+
+.cs-slider label {
+    font-size: 23px;
+}
+
+.cs-dialog.options-dialog {
+    max-width: 690px;
 }
 
 .cs-dialog {
+    font-size: 23px;
+    transform: scale(1.15);
+    transform-origin: center;
+}
+
+.cs-dialog .heading .text {
+    font-size: 20px !important;
+}
+
+.cs-dialog .cs-tabs .label {
     font-size: 20px;
+}
 
-    .heading {
-        .text {
-            font-size: 20px !important;
-        }
-    }
+.cs-dialog .cs-tabs .cs-input {
+    font-size: 23px;
+}
 
-    .cs-tabs {
-        .label {
-            font-size: 20px;
-        }
+.cs-dialog .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
 
-        .cs-input {
-            font-size: 20px;
-        }
-    }
-
-    .sections {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+.quit-dialog.cs-dialog {
+    font-size: 18px;
 }
 
 .spraypaint-preview {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 17px;
 }
 
 .spraypaint-preview-image {
-    width: 80px;
-    height: 80px;
+    width: 92px;
+    height: 92px;
     background-size: cover;
     background-position: center;
 }
@@ -89,13 +144,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80px;
+    height: 92px;
 }
 
 .spraypaint-selector-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
 }
 
 .spraypaint-selector-row:last-child {
@@ -118,4 +173,73 @@ body {
 
 .filter-grayscale {
     filter: grayscale(1);
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1440px) {
+    body {
+        font-size: 108%;
+    }
+    
+    .menu-item {
+        font-size: 32px;
+    }
+    
+    .cs-dialog {
+        transform: scale(1.08);
+    }
+    
+    .cs-dialog.options-dialog {
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 100%;
+    }
+    
+    .menu {
+        width: 250px;
+        margin-left: 5%;
+    }
+    
+    .menu-item {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    .player-name-section, .city-section {
+        width: 200px;
+    }
+    
+    .age-and-city-row {
+        gap: 70px;
+    }
+    
+    .spraypaint-section {
+        width: 250px;
+    }
+    
+    .cs-dialog {
+        transform: scale(1);
+        font-size: 20px;
+    }
+    
+    .cs-dialog.options-dialog {
+        max-width: 600px;
+    }
+    
+    .cs-dialog .heading .text,
+    .cs-dialog .cs-tabs .label,
+    .cs-dialog .cs-tabs .cs-input {
+        font-size: 20px !important;
+    }
+    
+    .spraypaint-preview-image,
+    .spraypaint-selectors {
+        width: 80px;
+        height: 80px;
+    }
 }

@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <dialog class="cs-dialog" id="options-dialog">
+    <dialog class="cs-dialog options-dialog" id="options-dialog">
         <form method="dialog">
             <div class="heading">
                 <div class="wrapper">
@@ -43,7 +43,7 @@
                                 <label for="player-name">Player name</label>
                                 <input type="text" id="player-name" class="cs-input" readonly value="Roman Mendaliev">
                             </div>
-                            <div>
+                            <div class="spraypaint-section">
                                 <label>Spraypaint image</label>
                                 <div class="spraypaint-preview">
                                     <div class="spraypaint-preview-image" id="spraypaint-preview"></div>
@@ -66,6 +66,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="age-and-city-row">
+                                <div class="age-section">   
+                                    <div class="cs-slider">
+                                        <div class="value">
+                                            <p>0</p>
+                                            <p>100</p>
+                                        </div>
+                                        <div class="ruler"></div>
+                                        <input type="range" id="age-range" min="0" max="100" value="25" disabled>
+                                        <label for="age-range">Age</label>
+                                    </div>
+                                    <div class="age-input-row">
+                                        <input type="text" id="age-value" class="cs-input age-input" readonly value="25">
+                                    </div>
+                                </div>
+                                <div class="city-section">
+                                    <label for="city">Location</label>
+                                    <input type="text" id="city" class="cs-input" readonly value="Saint-Petersburg, Russia">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +98,7 @@
         </form>
     </dialog>
 
-    <dialog class="cs-dialog" id="quit-dialog">
+    <dialog class="cs-dialog quit-dialog" id="quit-dialog">
         <form method="dialog">
             <div class="heading">
                 <div class="wrapper">
