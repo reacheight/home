@@ -242,7 +242,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .cs-dialog.options-dialog {
-        max-width: 540px;
+        width: 360px;
     }
 
     .age-and-city-row {
