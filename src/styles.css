@@ -214,10 +214,6 @@ body {
         width: 200px;
     }
     
-    .age-and-city-row {
-        gap: 70px;
-    }
-    
     .spraypaint-section {
         width: 250px;
     }
@@ -241,5 +237,18 @@ body {
     .spraypaint-selectors {
         width: 80px;
         height: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cs-dialog.options-dialog {
+        max-width: 540px;
+    }
+
+    .age-and-city-row {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        align-items: normal;
     }
 }
