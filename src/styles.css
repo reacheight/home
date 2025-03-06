@@ -287,16 +287,24 @@ body {
         margin-bottom: 10%;
     }
 
+    .cs-dialog .sections {
+        gap: 20px;
+    }
+
     .age-and-city-row {
         display: flex;
         flex-direction: column;
-        gap: 34px;
+        gap: 20px;
         align-items: normal;
     }
 
     .upper-section {
         flex-direction: column;
         align-items: normal;
+    }
+
+    .upper-left-column {
+        gap: 20px;
     }
 
     .symbol-rectangle {
