@@ -249,6 +249,10 @@ body {
         width: 360px;
     }
 
+    .menu {
+        margin-bottom: 10%;
+    }
+
     .age-and-city-row {
         display: flex;
         flex-direction: column;
