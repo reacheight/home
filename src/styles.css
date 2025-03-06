@@ -288,13 +288,13 @@ body {
     }
 
     .cs-dialog .sections {
-        gap: 20px;
+        gap: 15px;
     }
 
     .age-and-city-row {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         align-items: normal;
     }
 
@@ -304,7 +304,7 @@ body {
     }
 
     .upper-left-column {
-        gap: 20px;
+        gap: 15px;
     }
 
     .symbol-rectangle {
