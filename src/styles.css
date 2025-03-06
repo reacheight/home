@@ -75,7 +75,7 @@ body {
 .age-and-city-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -122,6 +122,34 @@ body {
     gap: 34px;
 }
 
+.upper-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.symbol-rectangle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 300px;
+}
+
+.symbol-rectangle pre {
+    font-family: 'ArialPixel';
+    color: #cccccc;
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+}
+
 .quit-dialog.cs-dialog {
     font-size: 18px;
 }
@@ -155,6 +183,16 @@ body {
 
 .spraypaint-selector-row:last-child {
     margin-bottom: 0;
+}
+
+.build-smth-link {
+    text-decoration: underline;
+    color: hotpink;
+}
+
+.telegram-link {
+    text-decoration: underline;
+    color: rgb(0, 166, 255);
 }
 
 /* Filters */
@@ -254,5 +292,18 @@ body {
         flex-direction: column;
         gap: 34px;
         align-items: normal;
+    }
+
+    .upper-section {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .symbol-rectangle {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 30px;
+        width: 300px;
     }
 }
