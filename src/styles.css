@@ -167,12 +167,8 @@ body {
     filter: grayscale(100%) sepia(100%) hue-rotate(10deg) saturate(300%) brightness(0.9);
 }
 
-.filter-blue {
-    filter: grayscale(100%) sepia(100%) hue-rotate(170deg) saturate(300%) brightness(0.7) contrast(1.1);
-}
-
 .filter-ltblue {
-    filter: grayscale(100%) sepia(100%) hue-rotate(140deg) saturate(500%) brightness(0.8) contrast(1.1);
+    filter: grayscale(100%) sepia(100%) hue-rotate(150deg) saturate(500%) brightness(0.8) contrast(1.1);
 }
 
 .filter-green {
