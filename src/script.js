@@ -15,7 +15,7 @@ function initOptionsDialog() {
         const selectedImagePath = spraypaintImages[spraypaintImageSelector.value];
         const selectedFilter = spraypaintFilterSelector.value;
         
-        spraypaintPreview.classList.remove('filter-orange', 'filter-ltblue', 'filter-sepia', 'filter-grayscale');
+        spraypaintPreview.classList.remove('filter-orange', 'filter-yellow', 'filter-blue', 'filter-green', 'filter-ltblue');
         
         if (selectedImagePath) {
             spraypaintPreview.style.backgroundImage = `url('${selectedImagePath}')`;

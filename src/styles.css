@@ -160,19 +160,23 @@ body {
 /* Filters */
 
 .filter-orange {
-    filter: sepia(0.5) hue-rotate(20deg) saturate(1.7) brightness(1.1);
+    filter: grayscale(100%) sepia(100%) hue-rotate(340deg) saturate(300%) brightness(0.8) contrast(1.3);
+}
+
+.filter-yellow {
+    filter: grayscale(100%) sepia(100%) hue-rotate(10deg) saturate(300%) brightness(0.9);
+}
+
+.filter-blue {
+    filter: grayscale(100%) sepia(100%) hue-rotate(170deg) saturate(300%) brightness(0.7) contrast(1.1);
 }
 
 .filter-ltblue {
-    filter: hue-rotate(180deg) saturate(1.5);
+    filter: grayscale(100%) sepia(100%) hue-rotate(140deg) saturate(500%) brightness(0.8) contrast(1.1);
 }
 
-.filter-sepia {
-    filter: sepia(0.8);
-}
-
-.filter-grayscale {
-    filter: grayscale(1);
+.filter-green {
+    filter: grayscale(100%) sepia(100%) hue-rotate(70deg) saturate(400%) brightness(0.7);
 }
 
 /* Responsiveness */
