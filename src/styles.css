@@ -198,13 +198,10 @@ body {
 .servers-dialog.cs-dialog {
     max-width: 900px;
     width: 900px;
+}
 
-    .cs-tabs {
-        .panel {
-            padding: 10px 0 10px;
-        }
-    }
-
+.servers-dialog.cs-dialog .cs-tabs .panel {
+    padding: 10px 0 10px;
 }
 
 .server-browser {
@@ -237,10 +234,10 @@ body {
 .server-item-column {
     padding: 4px 6px;
     overflow: hidden;
+}
 
-    &.project-description-column {
-        padding-right: 10px;
-    }
+.server-item-column.project-description-column {
+    padding-right: 10px;
 }
 
 .server-item.selected {
@@ -269,13 +266,13 @@ body {
     gap: 10px;
     float: right;
     margin-right: 10px;
+}
 
-    .cs-btn {
-        font-size: 23px;
-        padding: 6px 5px 6px;
-        width: 100px;
-        text-align: left;
-    }
+.server-actions .cs-btn {
+    font-size: 23px;
+    padding: 6px 5px 6px;
+    width: 100px;
+    text-align: left;
 }
 
 /* Filters */

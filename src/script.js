@@ -87,15 +87,15 @@ function initServersDialog() {
         });
 
         item.addEventListener('dblclick', function() {
-            const url = selectedServer.getAttribute('data-url');
-            window.open(url, '_blank');
+            const url = this.getAttribute('data-url');
+            window.open(url, '_blank', 'noopener');
         });
     });
     
     connectBtn.addEventListener('click', function() {
         if (selectedServer) {
             const url = selectedServer.getAttribute('data-url');
-            window.open(url, '_blank');
+            window.open(url, '_blank', 'noopener');
         }
     });
     
