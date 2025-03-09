@@ -139,6 +139,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     optionsDialog.showModal();
 
+    const buildLinks = document.querySelectorAll('.build-smth-link');
+    buildLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (optionsDialog && optionsDialog.open) {
+                optionsDialog.close();
+            }
+            
+            if (serversDialog) {
+                serversDialog.showModal();
+            }
+        });
+    });
+
     const menuItems = document.querySelectorAll('.menu-item');
     
     menuItems.forEach(item => {

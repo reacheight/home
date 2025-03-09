@@ -186,6 +186,7 @@ body {
 }
 
 .build-smth-link {
+    cursor: pointer;
     text-decoration: underline;
     color: hotpink;
 }
