@@ -215,6 +215,7 @@ body {
     background-color: var(--secondary-bg);
     margin-bottom: 15px;
     border-bottom: 1px solid var(--border-light);
+    overflow-y: auto;
 }
 
 .server-list-header {
@@ -235,6 +236,7 @@ body {
 
 .server-item-column {
     padding: 4px 6px;
+    overflow: hidden;
 }
 
 .server-item.selected {
@@ -308,11 +310,6 @@ body {
     .cs-dialog.options-dialog {
         max-width: 650px;
     }
-    
-    .cs-dialog.servers-dialog {
-        width: 700px;
-        height: 500px;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -349,7 +346,6 @@ body {
     
     .cs-dialog.servers-dialog {
         width: 90%;
-        height: 90%;
     }
 
     .cs-dialog .heading .text,
@@ -372,7 +368,10 @@ body {
     
     .cs-dialog.servers-dialog {
         width: 95%;
-        height: 95%;
+    }
+
+    .server-browser {
+        height: 400px;
     }
 
     .menu {
@@ -405,24 +404,5 @@ body {
         align-items: flex-start;
         margin-top: 30px;
         width: 300px;
-    }
-    
-    .server-browser {
-        height: 250px;
-    }
-    
-    .server-details {
-        flex-direction: column;
-    }
-    
-    .server-info {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    
-    .server-actions {
-        flex-direction: row;
-        width: 100%;
-        margin-left: 0;
     }
 }
