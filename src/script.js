@@ -101,9 +101,28 @@ function initServersDialog() {
     
     refreshBtn.addEventListener('click', function() {
         refreshBtn.disabled = true;
-        setTimeout(() => {
-            refreshBtn.disabled = false;
-        }, 500);
+        
+        const serverCountElement = dialog.querySelector('.server-list-header .project-description-column');
+        
+        serverItems.forEach(item => {
+            item.style.display = 'none';
+        });
+        
+        serverCountElement.textContent = 'Servers (0)';
+        
+        let delay = 50;
+        serverItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.display = '';
+                serverCountElement.textContent = `Servers (${index + 1})`;
+                
+                if (index === serverItems.length - 1) {
+                    setTimeout(() => {
+                        refreshBtn.disabled = false;
+                    }, 100);
+                }
+            }, delay * (index + 1));
+        });
     });
     
     dialog.querySelector('.close').addEventListener('click', function() {
