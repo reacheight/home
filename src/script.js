@@ -65,9 +65,58 @@ function initQuitDialog() {
     return dialog;
 }
 
+function initServersDialog() {
+    const dialog = document.getElementById('servers-dialog');
+    if (!dialog) return null;
+    
+    const serverItems = dialog.querySelectorAll('.server-item');
+    const connectBtn = dialog.querySelector('#connect-btn');
+    const refreshBtn = dialog.querySelector('#refresh-btn');
+    
+    let selectedServer = null;
+    function selectServer(serverItem) {
+        serverItems.forEach(item => item.classList.remove('selected'));
+        serverItem.classList.add('selected');
+        selectedServer = serverItem;
+        connectBtn.disabled = false;
+    }
+
+    serverItems.forEach(item => {
+        item.addEventListener('click', function() {
+            selectServer(this);
+        });
+
+        item.addEventListener('dblclick', function() {
+            const url = selectedServer.getAttribute('data-url');
+            window.open(url, '_blank');
+        });
+    });
+    
+    connectBtn.addEventListener('click', function() {
+        if (selectedServer) {
+            const url = selectedServer.getAttribute('data-url');
+            window.open(url, '_blank');
+        }
+    });
+    
+    refreshBtn.addEventListener('click', function() {
+        refreshBtn.disabled = true;
+        setTimeout(() => {
+            refreshBtn.disabled = false;
+        }, 500);
+    });
+    
+    dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+    });
+    
+    return dialog;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const optionsDialog = initOptionsDialog();
     const quitDialog = initQuitDialog();
+    const serversDialog = initServersDialog();
     
     optionsDialog.showModal();
 
@@ -82,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
             switch(sectionId) {
                 case 'options':
                     if (optionsDialog) optionsDialog.showModal();
+                    break;
+                case 'find-servers':
+                    if (serversDialog) serversDialog.showModal();
                     break;
                 case 'quit':
                     if (quitDialog) quitDialog.showModal();

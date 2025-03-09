@@ -136,6 +136,71 @@
         </form>
     </dialog>
 
+    <dialog class="cs-dialog servers-dialog" id="servers-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Servers</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content servers">
+                <div class="cs-tabs">
+                    <input
+                        class="radiotab"
+                        name="server-tabs"
+                        tabindex="1"
+                        type="radio"
+                        id="favorites-tab"
+                        checked
+                    />
+                    <label class="label" for="favorites-tab">Favorites</label>
+                    <div class="panel" tabindex="1">
+                        <div class="server-browser">
+                            <div class="server-list-header">
+                                <div class="project-name-column cs-btn">Game</div>
+                                <div class="project-description-column cs-btn">Servers (4)</div>
+                                <div class="project-stack-column cs-btn">Players</div>
+                                <div class="project-status-column cs-btn">Status</div>
+                            </div>
+                            <div class="server-list">
+                                <div class="server-item" data-url="https://github.com/reacheight/kodifix">
+                                    <div class="project-name-column server-item-column">kodifix</div>
+                                    <div class="project-description-column server-item-column">CodeCombat-like game to learn Python</div>
+                                    <div class="project-stack-column server-item-column">node.js, react, javascript</div>
+                                    <div class="project-status-column server-item-column">Live</div>
+                                </div>
+                                <div class="server-item" data-url="https://github.com/reacheight/wind">
+                                    <div class="project-name-column server-item-column">wind</div>
+                                    <div class="project-description-column server-item-column">Dota 2 replay analyzer</div>
+                                    <div class="project-stack-column server-item-column">scala, react, typescript</div>
+                                    <div class="project-status-column server-item-column">Offline</div>
+                                </div>
+                                <div class="server-item" data-url="https://github.com/reacheight/twitch-mal-profile">
+                                    <div class="project-name-column server-item-column">MAL profile</div>
+                                    <div class="project-description-column server-item-column">Twitch extension to show a MyAnimeList profile under the stream</div>
+                                    <div class="project-stack-column server-item-column">react, javascript</div>
+                                    <div class="project-status-column server-item-column">Live</div>
+                                </div>
+                                <div class="server-item" data-url="https://github.com/reacheight/home">
+                                    <div class="project-name-column server-item-column">home</div>
+                                    <div class="project-description-column server-item-column">Counter-Strike 1.6 themed personal website</div>
+                                    <div class="project-stack-column server-item-column">html, css, javascript</div>
+                                    <div class="project-status-column server-item-column">Live</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="server-actions">
+                            <button type="button" class="cs-btn" id="refresh-btn">Refresh</button>
+                            <button type="button" class="cs-btn" id="connect-btn" disabled>Connect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>
