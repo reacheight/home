@@ -237,6 +237,10 @@ body {
 .server-item-column {
     padding: 4px 6px;
     overflow: hidden;
+
+    &.project-description-column {
+        padding-right: 10px;
+    }
 }
 
 .server-item.selected {
