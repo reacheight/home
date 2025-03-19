@@ -21,6 +21,56 @@
         </div>
     </div>
 
+    <dialog class="cs-dialog new-game-dialog" id="new-game-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Create Server</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content">
+                <div class="cs-tabs">
+                    <input
+                        class="radiotab"
+                        name="tabs"
+                        tabindex="1"
+                        type="radio"
+                        id="tabone"
+                        checked
+                    />
+                    <label class="label" for="tabone">Server</label>
+                    <div class="panel" tabindex="1">
+                        <div class="map-selector">
+                            <label>Map</label>
+                            <select class="cs-select">
+                                <option selected>de_home</option>
+                            </select>
+                        </div>
+                        <hr class="cs-hr" />
+                        <p class="text description">
+                            Hi, I'm Roman and this is my little portfolio and a tribute to the game I love.<br /><br />
+                            I started playing CS 1.6 when I was around 12 years old, and this game had me hooked.
+                            At some point, I even googled 'how to become a pro CS player' and read a sarcastic article that suggested
+                            eating only <a href="https://en.wikipedia.org/wiki/Butterbrot#Present-day_use" target="_blank">buterbrods</a>.<br />
+                            So as you can guess, I didn't end up as a CS pro. But I still ended up having so many happy hours playing this game and so many fond memories.
+                            Playing it will always feel like I'm 12 again - it's a sunny Saturday morning, no school, mom's doing laundry, and all I have to worry about is how to frag more.<br />
+                            <br />
+                            I hope this site brings you some nostalgia and maybe even makes you want to play CS 1.6 again.<br />
+                            <br />
+                            You can find my basic info and contacts in the 'Options' window and my projects in 'Find servers'.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <menu class="footer-btns">
+                <button type="button" class="cs-btn" id="new-game-start">Start</button>
+                <button type="button" class="cs-btn" id="new-game-cancel">Cancel</button>
+            </menu>
+        </form>
+    </dialog>
+
     <dialog class="cs-dialog options-dialog" id="options-dialog">
         <form method="dialog">
             <div class="heading">

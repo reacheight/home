@@ -46,6 +46,21 @@ function initOptionsDialog() {
     return dialog;
 }
 
+function initNewGameDialog() {
+    const dialog = document.getElementById('new-game-dialog');
+    if (!dialog) return null;
+    
+    dialog.querySelector('#new-game-cancel').addEventListener('click', function() {
+        dialog.close();
+    });
+    
+    dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+    });
+    
+    return dialog;
+}
+
 function initQuitDialog() {
     const dialog = document.getElementById('quit-dialog');
     if (!dialog) return null;
@@ -133,13 +148,14 @@ function initServersDialog() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const newGame = initNewGameDialog();
     const optionsDialog = initOptionsDialog();
     const quitDialog = initQuitDialog();
     const serversDialog = initServersDialog();
 
     setTimeout(() => {
         document.getElementById('intro-overlay').classList.add('hidden');
-        optionsDialog.showModal();
+        newGame.showModal();
     }, 5300);
     
     const buildLinks = document.querySelectorAll('.build-smth-link');
@@ -166,6 +182,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionId = this.getAttribute('data-section');
             
             switch(sectionId) {
+                case 'new-game':
+                    if (newGame) newGame.showModal();
+                    break;
                 case 'options':
                     if (optionsDialog) optionsDialog.showModal();
                     break;

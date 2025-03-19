@@ -121,6 +121,33 @@ body {
     max-width: 690px;
 }
 
+.cs-dialog.new-game-dialog {
+    width: 600px;
+
+    .cs-select {
+        line-height: 18px;
+        width: 200px;
+    }
+
+    .map-selector {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        margin-top: 15px;
+        line-height: 1.1;
+        font-size: 20px;
+
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+            color: var(--accent);
+        }
+    }
+}
+
 .cs-dialog {
     font-size: 23px;
     transform: scale(1.15);
@@ -399,6 +426,10 @@ body {
     }
     
     .cs-dialog.servers-dialog {
+        width: 95%;
+    }
+
+    .cs-dialog.new-game-dialog {
         width: 95%;
     }
 
