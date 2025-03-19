@@ -191,6 +191,13 @@ body {
     color: hotpink;
 }
 
+.build-smth-tooltip-text {
+    bottom: 100%;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
 .telegram-link {
     text-decoration: underline;
     color: rgb(0, 166, 255);
