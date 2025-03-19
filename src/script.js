@@ -136,9 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionsDialog = initOptionsDialog();
     const quitDialog = initQuitDialog();
     const serversDialog = initServersDialog();
-    
-    optionsDialog.showModal();
 
+    setTimeout(() => {
+        document.getElementById('intro-overlay').classList.add('hidden');
+        optionsDialog.showModal();
+    }, 5300);
+    
     const buildLinks = document.querySelectorAll('.build-smth-link');
     buildLinks.forEach(link => {
         link.addEventListener('click', function(e) {
