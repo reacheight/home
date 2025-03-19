@@ -1,4 +1,4 @@
-Thank you ekmas for [the cs16 CSS library](https://github.com/ekmas/cs16.css).
+Thank you samke for [the cs16 CSS library](https://github.com/ekmas/cs16.css).
 
 Thank you Valve for the game.
 
