@@ -49,6 +49,10 @@ function initOptionsDialog() {
 function initNewGameDialog() {
     const dialog = document.getElementById('new-game-dialog');
     if (!dialog) return null;
+
+    dialog.querySelector('#new-game-start').addEventListener('click', function() {
+        dialog.close();
+    });
     
     dialog.querySelector('#new-game-cancel').addEventListener('click', function() {
         dialog.close();
