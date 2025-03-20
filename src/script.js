@@ -157,8 +157,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const quitDialog = initQuitDialog();
     const serversDialog = initServersDialog();
 
+    const introOverlay = document.getElementById('intro-overlay');
+    introOverlay.addEventListener('transitionend', () => {
+        introOverlay.style.display = 'none';
+    }, { once: true });
+    
     setTimeout(() => {
-        document.getElementById('intro-overlay').classList.add('hidden');
+        introOverlay.classList.add('hidden');
         newGame.showModal();
     }, 5100);
     
