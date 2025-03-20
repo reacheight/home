@@ -162,6 +162,16 @@ document.addEventListener('DOMContentLoaded', function() {
         introOverlay.classList.add('hidden');
         newGame.showModal();
     }, 5100);
+
+    const menuClickSound = new Audio('sounds/menu_click.wav');
+    const menuCloseSound = new Audio('sounds/window_close.wav');
+
+    document.querySelectorAll('.cs-dialog .close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            menuCloseSound.currentTime = 0;
+            menuCloseSound.play();
+        });
+    });
     
     const buildLinks = document.querySelectorAll('.build-smth-link');
     buildLinks.forEach(link => {
@@ -179,10 +189,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const menuItems = document.querySelectorAll('.menu-item');
-    
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
+            
+            menuClickSound.currentTime = 0;
+            menuClickSound.play();
             
             const sectionId = this.getAttribute('data-section');
             
