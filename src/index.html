@@ -6,10 +6,16 @@
     <title>home | 🪜 roman mendaliev 🕳</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preload" as="video" href="images/intro.webm" type="video/webm">
+    <link rel="preload" as="image" href="images/background.png">
+    <link rel="preload" as="image" href="images/me1.jpg">
+    <link rel="preload" as="image" href="images/me2.jpg">
 </head>
 <body>
     <div id="intro-overlay">
-        <img src="images/intro.gif" alt="Intro animation">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="images/intro.webm" type="video/webm">
+        </video>
     </div>
     
     <div class="container">

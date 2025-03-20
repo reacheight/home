@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         document.getElementById('intro-overlay').classList.add('hidden');
         newGame.showModal();
-    }, 5300);
+    }, 5100);
     
     const buildLinks = document.querySelectorAll('.build-smth-link');
     buildLinks.forEach(link => {
