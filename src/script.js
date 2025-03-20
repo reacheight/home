@@ -30,6 +30,12 @@ function initOptionsDialog() {
     
     spraypaintImageSelector.addEventListener('change', updateSpraypaintPreview);
     spraypaintFilterSelector.addEventListener('change', updateSpraypaintPreview);
+
+    const chickenSound = new Audio('sounds/chicken.wav');
+    spraypaintPreview.addEventListener('click', function() {
+        chickenSound.currentTime = 0;
+        chickenSound.play();
+    })
     
     dialog.querySelector('#options-ok').addEventListener('click', function() {
         dialog.close();

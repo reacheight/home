@@ -214,6 +214,7 @@ body {
     height: 92px;
     background-size: cover;
     background-position: center;
+    cursor: crosshair;
 }
 
 .spraypaint-selectors {
