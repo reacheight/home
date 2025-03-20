@@ -77,10 +77,6 @@ function initQuitDialog() {
         dialog.close();
     });
     
-    dialog.querySelector('.close').addEventListener('click', function() {
-        dialog.close();
-    });
-    
     return dialog;
 }
 
