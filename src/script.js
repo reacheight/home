@@ -50,8 +50,12 @@ function initNewGameDialog() {
     const dialog = document.getElementById('new-game-dialog');
     if (!dialog) return null;
 
+    const goSound = new Audio('sounds/go.wav');
+
     dialog.querySelector('#new-game-start').addEventListener('click', function() {
         dialog.close();
+        goSound.currentTime = 0;
+        goSound.play();
     });
     
     dialog.querySelector('#new-game-cancel').addEventListener('click', function() {
@@ -157,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
     introOverlay.addEventListener('transitionend', () => {
         introOverlay.style.display = 'none';
     }, { once: true });
-    
+
     setTimeout(() => {
         introOverlay.classList.add('hidden');
         newGame.showModal();
