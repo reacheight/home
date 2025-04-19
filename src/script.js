@@ -5,7 +5,8 @@ function initOptionsDialog() {
     const spraypaintImages = {
         'lambda': 'images/me1.jpg',
         'smiley': 'images/me2.jpg',
-        'heart': 'images/me3.jpg'
+        'heart': 'images/me3.jpg',
+        'kid': 'images/me4.jpg',
     };
     
     const spraypaintPreview = dialog.querySelector('#spraypaint-preview');
